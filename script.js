@@ -36,13 +36,16 @@ function copyAccountNumber() {
     toast.className = "toast show";
     
     // Hide after 3 seconds
-    setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+    setTimeout(function(){ 
+      toast.className = toast.className.replace("show", ""); 
+    }, 3000);
   }).catch(err => {
     console.error('Failed to copy: ', err);
   });
 }
 
 // 3. SCROLL REVEAL ANIMATION
+// This makes the gallery and other sections fade in as you scroll down
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {

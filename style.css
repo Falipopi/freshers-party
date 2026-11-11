@@ -32,10 +32,6 @@ body {
   100% { opacity: 0.6; transform: translateX(-50%) scale(1); }
 }
 
-@keyframes shine {
-  100% { left: 200%; }
-}
-
 /* --- Applying Animations --- */
 .fade-in {
   opacity: 0; 
@@ -163,7 +159,7 @@ h2 {
   object-fit: cover;
 }
 
-/* --- Ticket Card (Primary CTA) --- */
+/* --- Ticket Card (Main CTA) --- */
 .ticket-card {
   background: linear-gradient(145deg, #141414, #0a0a0a);
   border: 1px solid #262626;
@@ -212,107 +208,14 @@ h2 {
   margin-bottom: 1.5rem;
 }
 
-/* --- Buttons --- */
-.btn-primary {
-  display: block;
-  width: 100%;
-  padding: 1.2rem;
-  background: #ff4d00;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 12px;
-  font-weight: 800;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: all 0.2s ease;
-  border: none;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn-primary::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
-  transform: skewX(-20deg);
-  animation: shine 4s infinite;
-}
-
-.btn-primary:hover {
-  background: #ff6a26;
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(255, 77, 0, 0.4);
-}
-
-.btn-primary:active {
-  transform: translateY(1px) scale(0.98);
-}
-
-/* --- Gallery Section --- */
-.gallery-section {
-  margin-bottom: 3rem;
-  padding-top: 2rem;
-  border-top: 1px solid #262626;
-}
-
-.gallery-section h2 {
-  margin-bottom: 0.5rem;
-}
-
-.gallery-section > p {
-  color: #a0a0a0;
-  margin-bottom: 1.5rem;
-  font-size: 0.95rem;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* Two images per line */
-  gap: 10px;
-}
-
-.gallery-grid img {
-  width: 100%;
-  height: 280px; /* A bit taller so you see more of the outfit */
-  object-fit: cover; /* This makes the image fill the box (crops slightly) */
-  object-position: center top; /* Keeps the focus on the top so heads aren't cut off */
-  border-radius: 12px;
-  border: 1px solid #262626;
-  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-  filter: grayscale(40%) brightness(0.8);
-  /* We removed background-color: #111; so there is no black box */
-}
-
-.gallery-grid img:hover {
-  transform: scale(1.05) translateY(-3px);
-  filter: grayscale(0%) brightness(1.1);
-  border-color: #ff4d00;
-  box-shadow: 0 10px 20px rgba(255, 77, 0, 0.2);
-  z-index: 1;
-}
-
-/* --- Bank Section --- */
-.bank-section {
-  border-top: 1px solid #262626;
-  padding-top: 2rem;
-}
-
-.bank-section > p {
-  color: #a0a0a0;
-  margin-bottom: 1rem;
-}
-
+/* --- Bank Card inside Ticket --- */
 .bank-card {
-  background: #111;
-  border: 1px solid #262626;
-  border-radius: 16px;
-  padding: 1.5rem;
-  margin-bottom: 1rem;
+  background: #050505; 
+  border: 1px solid #333; 
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
 .bank-row {
@@ -367,7 +270,50 @@ h2 {
   margin-top: 4px;
 }
 
-/* Copy Toast Notification */
+/* --- Gallery Section (2 per line) --- */
+.gallery-section {
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #262626;
+}
+
+.gallery-section h2 {
+  margin-bottom: 0.5rem;
+}
+
+.gallery-section > p {
+  color: #a0a0a0;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two images per line */
+  gap: 10px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 280px; /* Taller so you see more of the outfit */
+  object-fit: cover; /* Fills the box, crops edges slightly */
+  object-position: center top; /* Focuses on the top so heads aren't cut */
+  border-radius: 12px;
+  border: 1px solid #262626;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  filter: grayscale(40%) brightness(0.8);
+  /* No black background anymore! */
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05) translateY(-3px);
+  filter: grayscale(0%) brightness(1.1);
+  border-color: #ff4d00;
+  box-shadow: 0 10px 20px rgba(255, 77, 0, 0.2);
+  z-index: 1;
+}
+
+/* --- Toast Notification --- */
 #toast {
   visibility: hidden;
   min-width: 250px;
@@ -393,7 +339,14 @@ h2 {
   bottom: 50px;
 }
 
-/* Scroll Reveal Animation */
+/* --- Utilities & Scroll Reveal --- */
+.note {
+  color: #888;
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
 .scroll-reveal {
   opacity: 0;
   transform: translateY(40px);
@@ -405,28 +358,11 @@ h2 {
   transform: translateY(0);
 }
 
-/* --- Utilities --- */
-.note {
-  color: #666;
-  font-size: 0.85rem;
-  margin-top: 1rem;
-  line-height: 1.5;
-}
-
-a {
-  color: #ff7a3d;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
 /* --- Mobile Adjustments --- */
 @media (max-width: 480px) {
   h1 { font-size: 2.8rem; }
   .ticket-card { padding: 1.5rem; }
   .bank-row { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
   .bank-row strong { text-align: left; max-width: 100%; }
-  .gallery-grid img { height: 250px; }
+  .gallery-grid img { height: 220px; } /* Slightly shorter on mobile so it fits well */
 }

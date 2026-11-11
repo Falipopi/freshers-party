@@ -278,13 +278,14 @@ h2 {
 
 .gallery-grid img {
   width: 100%;
-  height: 250px; /* Fixed height so they align neatly */
-  object-fit: contain; /* Shows the FULL image without cropping */
-  background-color: #111; /* Fills the empty space with dark grey */
+  height: 280px; /* A bit taller so you see more of the outfit */
+  object-fit: cover; /* This makes the image fill the box (crops slightly) */
+  object-position: center top; /* Keeps the focus on the top so heads aren't cut off */
   border-radius: 12px;
   border: 1px solid #262626;
   transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
   filter: grayscale(40%) brightness(0.8);
+  /* We removed background-color: #111; so there is no black box */
 }
 
 .gallery-grid img:hover {

@@ -272,18 +272,19 @@ h2 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr; /* One image per row so they are nice and big */
+  gap: 15px;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: auto; /* Lets the image grow as tall as it needs to be */
+  object-fit: contain; /* Shows the FULL picture without cropping */
   border-radius: 12px;
   border: 1px solid #262626;
   transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
   filter: grayscale(40%) brightness(0.8);
+  background-color: #111; 
 }
 
 .gallery-grid img:hover {

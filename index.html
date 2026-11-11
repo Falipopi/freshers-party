@@ -33,12 +33,12 @@
       </div>
     </header>
 
-    <!-- Poster Image -->
+    <!-- Poster Image (Make sure you have imgs/poster.png in your folder) -->
     <div class="poster-container fade-in delay-2">
       <img class="poster" src="imgs/poster.png" alt="Lost in Euphoria Party Poster" />
     </div>
 
-    <!-- Main CTA Section (Now just Bank Transfer) -->
+    <!-- Main CTA Section -->
     <section class="ticket-section fade-in delay-3">
       <div class="ticket-card">
         <div class="ticket-info">
@@ -49,7 +49,8 @@
         
         <p style="margin-bottom: 1rem; font-size: 0.95rem;">Transfer <strong>₦6,500</strong> to the account below:</p>
         
-        <div class="bank-card" style="text-align: left; margin-bottom: 1.5rem;">
+        <!-- Bank Details -->
+        <div class="bank-card">
           <div class="bank-row">
             <span>Bank</span>
             <strong>OPAY</strong>
@@ -58,15 +59,21 @@
             <span>Account Name</span>
             <strong>LOLIA EMMANUELLA ADOKIYE CHARLES</strong>
           </div>
-          <!-- CLICK TO COPY -->
+          <!-- Click to copy -->
           <div class="bank-row copy-row" onclick="copyAccountNumber()">
             <span>Account Number</span>
             <strong class="acct-num">9167382087 <span class="copy-icon">📋 Tap to copy</span></strong>
           </div>
         </div>
 
-        <p class="note" style="margin-top: 0;">
-          After payment, send your proof of payment to <strong>+234 XXX XXX XXXX</strong> on WhatsApp to receive your ticket.
+        <!-- WHATSAPP BUTTON -->
+        <!-- ⚠️ REPLACE 234YOURNUMBERHERE WITH YOUR ACTUAL WHATSAPP NUMBER (e.g., 2348012345678) -->
+        <a href="https://wa.me/2348105554353?text=Hi!%20I%20just%20paid%20%E2%82%A66%2C500%20for%20the%20Lost%20in%20Euphoria%20Early%20Bird%20ticket.%20Here%20is%20my%20receipt%3A" target="_blank" class="btn-whatsapp">
+          Send Receipt on WhatsApp
+        </a>
+        
+        <p class="note" style="margin-top: 1rem;">
+          After payment, tap the button above to send your proof of payment and receive your ticket.
         </p>
       </div>
     </section>
@@ -76,6 +83,7 @@
       <h2>The Vibe: Street Wear</h2>
       <p>Pull up in your best fits. Here's the energy we're expecting.</p>
       <div class="gallery-grid">
+        <!-- Make sure these match the exact file names in your imgs folder -->
         <img src="imgs/dress6.png" alt="Streetwear fit 1" />
         <img src="imgs/dress2.png" alt="Streetwear fit 2" />
         <img src="imgs/dress3.png" alt="Streetwear fit 3" />

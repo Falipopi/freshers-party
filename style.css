@@ -270,6 +270,36 @@ h2 {
   margin-top: 4px;
 }
 
+/* --- WhatsApp Button --- */
+.btn-whatsapp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  background: #25D366; /* Official WhatsApp Green */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.2s ease;
+  border: none;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+  background: #1ebe5d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+.btn-whatsapp:active {
+  transform: translateY(1px);
+}
+
 /* --- Gallery Section (2 per line) --- */
 .gallery-section {
   margin-bottom: 3rem;
@@ -302,7 +332,6 @@ h2 {
   border: 1px solid #262626;
   transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
   filter: grayscale(40%) brightness(0.8);
-  /* No black background anymore! */
 }
 
 .gallery-grid img:hover {
@@ -364,5 +393,5 @@ h2 {
   .ticket-card { padding: 1.5rem; }
   .bank-row { flex-direction: column; align-items: flex-start; gap: 0.3rem; }
   .bank-row strong { text-align: left; max-width: 100%; }
-  .gallery-grid img { height: 220px; } /* Slightly shorter on mobile so it fits well */
+  .gallery-grid img { height: 220px; }
 }

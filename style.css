@@ -278,13 +278,10 @@ h2 {
 
 .gallery-grid img {
   width: 100%;
-  height: auto; /* Lets the image grow as tall as it needs to be */
-  object-fit: contain; /* Shows the FULL picture without cropping */
+  height: auto; 
+  object-fit: contain; /* <--- THIS IS THE CULPRIT */
   border-radius: 12px;
-  border: 1px solid #262626;
-  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-  filter: grayscale(40%) brightness(0.8);
-  background-color: #111; 
+  /* ... rest of the code ... */
 }
 
 .gallery-grid img:hover {

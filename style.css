@@ -272,16 +272,19 @@ h2 {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: 1fr; /* One image per row so they are nice and big */
-  gap: 15px;
+  grid-template-columns: 1fr 1fr; /* Two images per line */
+  gap: 10px;
 }
 
 .gallery-grid img {
   width: 100%;
-  height: auto; 
-  object-fit: contain; /* <--- THIS IS THE CULPRIT */
+  height: 250px; /* Fixed height so they align neatly */
+  object-fit: contain; /* Shows the FULL image without cropping */
+  background-color: #111; /* Fills the empty space with dark grey */
   border-radius: 12px;
-  /* ... rest of the code ... */
+  border: 1px solid #262626;
+  transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  filter: grayscale(40%) brightness(0.8);
 }
 
 .gallery-grid img:hover {

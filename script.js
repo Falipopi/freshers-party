@@ -1,3 +1,8 @@
+/* ============================================
+   LOST IN EUPHORIA — GROUP OF 5 TICKET
+   script.js
+   ============================================ */
+
 /* ===== 1. MAIN COUNTDOWN ===== */
 const EVENT_DATE = new Date("2026-12-04T20:00:00+01:00"); 
 
@@ -43,12 +48,7 @@ function updatePromoCountdown() {
 updatePromoCountdown();
 setInterval(updatePromoCountdown, 1000);
 
-/* ===== 3. SELLENDA LINK ===== */
-// PASTE YOUR ACTUAL SELLENDA LINK HERE
-const SELLENDA_LINK = "https://sellenda.com.ng/event/https://www.sellenda.com.ng/events/freshers-2026-party-group-of-5"; 
-document.getElementById("sellendaBtn").href = SELLENDA_LINK;
-
-/* ===== 4. SCROLL REVEAL ===== */
+/* ===== 3. SCROLL REVEAL ===== */
 const revealElements = document.querySelectorAll(".scroll-reveal");
 function revealOnScroll() {
   revealElements.forEach((el) => {

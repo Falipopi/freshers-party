@@ -12,7 +12,7 @@
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #09050b; /* Very dark, slightly purple-tinted black */
+  background: #09050b;
   color: #fff;
   min-height: 100vh;
   overflow-x: hidden;
@@ -183,7 +183,7 @@ body {
 }
 
 /* ===== 9. SELLENDA BUTTON ===== */
-#sellendaBtn {
+.btn-sellenda {
   display: block;
   width: 100%;
   padding: 18px 20px;
@@ -201,7 +201,7 @@ body {
   margin-bottom: 1rem;
 }
 
-#sellendaBtn:hover {
+.btn-sellenda:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 30px rgba(255, 0, 127, 0.6);
 }

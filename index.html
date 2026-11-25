@@ -3,21 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lost in Euphoria — Group of 5 Ticket | ₦25,000</title>
+  <title>Lost in Euphoria — Group of 5 Ticket | ₦30,000</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Background glow effect -->
   <div class="glow-bg"></div>
 
   <main class="container">
     
-    <!-- Header Section -->
     <header class="hero fade-in delay-1">
       <p class="tagline">Wigwe University Party</p>
       <h1 class="glitch-text" data-text="Lost in Euphoria">Lost in Euphoria</h1>
       
-      <!-- COUNTDOWN TIMER -->
       <div class="countdown-container">
         <p>Doors open in:</p>
         <div id="countdown">Loading...</div>
@@ -31,31 +28,35 @@
       </div>
     </header>
 
-    <!-- GROUP OF 5 TICKET SECTION -->
+    <div class="promo-banner fade-in delay-2">
+      ⚠️ PROMO JUST FOR 2 DAYS!
+    </div>
+
     <section class="ticket-section fade-in delay-2">
       <div class="ticket-card">
+        
         <div class="ticket-info">
           <span class="tier-label">Group of 5 Ticket</span>
-          <span class="price">₦25,000 <small>per group</small></span>
+          <!-- PRICE UPDATED TO 30K -->
+          <span class="price">₦30,000 <small>per group</small></span>
         </div>
         <p class="ticket-desc">
           One ticket bundle for your squad — covers <strong>5 people</strong>. 
           Lock in your group's spot before it's gone.
         </p>
 
-        <!-- TIX CHECKOUT (ONLY OPTION NOW) -->
-        <a id="tixBtn" href="https://tix.africa/YOUR-EVENT-LINK" target="_blank" class="btn-whatsapp" style="display:block;text-align:center;margin-top:1.5rem;margin-bottom:1rem;">
-          🎟️ Buy Group of 5 on Tix
+        <!-- SELLENDA CHECKOUT -->
+        <a id="sellendaBtn" href="#" target="_blank">
+          🎟️ Buy Group of 5 on Sellenda
         </a>
 
         <p class="note">
-          Secure checkout powered by Tix. Get your tickets instantly!
+          Secure checkout powered by Sellenda. Get your tickets instantly!
         </p>
 
       </div>
     </section>
 
-    <!-- Streetwear Inspiration Gallery -->
     <section class="gallery-section scroll-reveal">
       <h2>The Vibe: Street Wear</h2>
       <p>Pull up in your best fits. Here's the energy we're expecting.</p>
@@ -67,15 +68,13 @@
       </div>
     </section>
 
+    <!-- NEW FOOTER -->
+    <footer class="site-footer">
+      <p>Site created by <strong>falipopi</strong></p>
+    </footer>
+
   </main>
 
   <script src="script.js"></script>
-
-  <!-- ===== PROMO CONFIG ===== -->
-  <script>
-    // Set your Tix event link here
-    const TIX_LINK = "https://tix.africa/YOUR-EVENT-LINK";
-    document.getElementById('tixBtn').href = TIX_LINK;
-  </script>
 </body>
 </html>

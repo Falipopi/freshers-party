@@ -3,15 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lost in Euphoria — Wigwe University Party | Early Bird ₦6,500</title>
+  <title>Lost in Euphoria — Group of 5 Ticket | ₦25,000</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- Background glow effect -->
   <div class="glow-bg"></div>
-
-  <!-- Copy Toast Notification -->
-  <div id="toast">Account Number Copied! ✅</div>
 
   <main class="container">
     
@@ -30,51 +27,31 @@
         <span class="badge">📅 Fri, Dec 4th, 2026</span>
         <span class="badge">📍 Wigwe University, Isiokpo</span>
         <span class="badge highlight">👕 Street Wear</span>
+        <span class="badge highlight">🔥 Group of 5</span>
       </div>
     </header>
 
-    <!-- Poster Image (Make sure you have imgs/poster.png in your folder) -->
-    <div class="poster-container fade-in delay-2">
-      <img class="poster" src="imgs/poster.png" alt="Lost in Euphoria Party Poster" />
-    </div>
-
-    <!-- Main CTA Section -->
-    <section class="ticket-section fade-in delay-3">
+    <!-- GROUP OF 5 TICKET SECTION -->
+    <section class="ticket-section fade-in delay-2">
       <div class="ticket-card">
         <div class="ticket-info">
-          <span class="tier-label">Limited Early Bird</span>
-          <span class="price">₦6,500</span>
+          <span class="tier-label">Group of 5 Ticket</span>
+          <span class="price">₦25,000 <small>per group</small></span>
         </div>
-        <p class="ticket-desc">Grab your tickets now before the price goes up. Everyone is invited!</p>
-        
-        <p style="margin-bottom: 1rem; font-size: 0.95rem;">Transfer <strong>₦6,500</strong> to the account below:</p>
-        
-        <!-- Bank Details -->
-        <div class="bank-card">
-          <div class="bank-row">
-            <span>Bank</span>
-            <strong>OPAY</strong>
-          </div>
-          <div class="bank-row">
-            <span>Account Name</span>
-            <strong>LOLIA EMMANUELLA ADOKIYE CHARLES</strong>
-          </div>
-          <!-- Click to copy -->
-          <div class="bank-row copy-row" onclick="copyAccountNumber()">
-            <span>Account Number</span>
-            <strong class="acct-num">9167382087 <span class="copy-icon">📋 Tap to copy</span></strong>
-          </div>
-        </div>
-
-        <!-- WHATSAPP BUTTON -->
-        <!-- ⚠️ REPLACE 234YOURNUMBERHERE WITH YOUR ACTUAL WHATSAPP NUMBER (e.g., 2348012345678) -->
-        <a href="https://wa.me/2348105554353?text=Hi!%20I%20just%20paid%20%E2%82%A66%2C500%20for%20the%20Lost%20in%20Euphoria%20Early%20Bird%20ticket.%20Here%20is%20my%20receipt%3A" target="_blank" class="btn-whatsapp">
-          Send Receipt on WhatsApp
-        </a>
-        
-        <p class="note" style="margin-top: 1rem;">
-          After payment, tap the button above to send your proof of payment and receive your ticket.
+        <p class="ticket-desc">
+          One ticket bundle for your squad — covers <strong>5 people</strong>. 
+          Lock in your group's spot before it's gone.
         </p>
+
+        <!-- TIX CHECKOUT (ONLY OPTION NOW) -->
+        <a id="tixBtn" href="https://tix.africa/YOUR-EVENT-LINK" target="_blank" class="btn-whatsapp" style="display:block;text-align:center;margin-top:1.5rem;margin-bottom:1rem;">
+          🎟️ Buy Group of 5 on Tix
+        </a>
+
+        <p class="note">
+          Secure checkout powered by Tix. Get your tickets instantly!
+        </p>
+
       </div>
     </section>
 
@@ -83,7 +60,6 @@
       <h2>The Vibe: Street Wear</h2>
       <p>Pull up in your best fits. Here's the energy we're expecting.</p>
       <div class="gallery-grid">
-        <!-- Make sure these match the exact file names in your imgs folder -->
         <img src="imgs/dress6.png" alt="Streetwear fit 1" />
         <img src="imgs/dress2.png" alt="Streetwear fit 2" />
         <img src="imgs/dress3.png" alt="Streetwear fit 3" />
@@ -93,7 +69,13 @@
 
   </main>
 
-  <!-- Link to JavaScript file -->
   <script src="script.js"></script>
+
+  <!-- ===== PROMO CONFIG ===== -->
+  <script>
+    // Set your Tix event link here
+    const TIX_LINK = "https://tix.africa/YOUR-EVENT-LINK";
+    document.getElementById('tixBtn').href = TIX_LINK;
+  </script>
 </body>
 </html>

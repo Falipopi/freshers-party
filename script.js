@@ -1,58 +1,48 @@
-// 1. COUNTDOWN TIMER
-// Set the date we're counting down to (Dec 4, 2026 19:00:00)
-const countDownDate = new Date("Dec 4, 2026 19:00:00").getTime();
+/* ============================================
+   LOST IN EUPHORIA — GROUP OF 5 TICKET
+   script.js
+   ============================================ */
 
-const timer = setInterval(function() {
+/* ===== 1. COUNTDOWN TO DEC 4TH 2026 ===== */
+const EVENT_DATE = new Date("2026-12-04T20:00:00+01:00"); 
+
+function updateCountdown() {
   const now = new Date().getTime();
-  const distance = countDownDate - now;
+  const distance = EVENT_DATE.getTime() - now;
 
-  // Time calculations for days, hours, minutes and seconds
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const el = document.getElementById("countdown");
+  if (!el) return;
+
+  if (distance < 0) {
+    el.textContent = "🎉 The party has started!";
+    return;
+  }
+
+  const days    = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours   = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  // Display the result in the element with id="countdown"
-  const countdownEl = document.getElementById("countdown");
-  if (countdownEl) {
-    countdownEl.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }
+  const pad = (n) => String(n).padStart(2, "0");
+  el.textContent = `${pad(days)}d ${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
+}
 
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(timer);
-    if (countdownEl) countdownEl.innerHTML = "IT'S PARTY TIME! 🔥";
-  }
-}, 1000);
+updateCountdown();
+setInterval(updateCountdown, 1000);
 
-// 2. CLICK TO COPY ACCOUNT NUMBER
-function copyAccountNumber() {
-  const acctNum = "9167382087";
-  
-  // Copy to clipboard
-  navigator.clipboard.writeText(acctNum).then(() => {
-    // Show the toast message
-    const toast = document.getElementById("toast");
-    toast.className = "toast show";
-    
-    // Hide after 3 seconds
-    setTimeout(function(){ 
-      toast.className = toast.className.replace("show", ""); 
-    }, 3000);
-  }).catch(err => {
-    console.error('Failed to copy: ', err);
+/* ===== 2. SCROLL REVEAL ===== */
+const revealElements = document.querySelectorAll(".scroll-reveal");
+
+function revealOnScroll() {
+  revealElements.forEach((el) => {
+    const top = el.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+
+    if (top < windowHeight - 100) {
+      el.classList.add("visible");
+    }
   });
 }
 
-// 3. SCROLL REVEAL ANIMATION
-// This makes the gallery and other sections fade in as you scroll down
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-});
-
-const hiddenElements = document.querySelectorAll('.scroll-reveal');
-hiddenElements.forEach((el) => observer.observe(el));
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);

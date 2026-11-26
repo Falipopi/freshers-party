@@ -4,7 +4,8 @@
    ============================================ */
 
 /* ===== 1. MAIN COUNTDOWN ===== */
-const EVENT_DATE = new Date("2026-12-04T20:00:00+01:00"); 
+// Dec 4, 2026 at 7:00 PM WAT
+const EVENT_DATE = new Date("2026-12-04T19:00:00+01:00"); 
 
 function updateCountdown() {
   const now = new Date().getTime();

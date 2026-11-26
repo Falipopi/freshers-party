@@ -214,7 +214,38 @@ body {
   line-height: 1.6;
 }
 
-/* ===== 11. GALLERY ===== */
+/* ===== 11. QR CODE SECTION ===== */
+.qr-section {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px dashed rgba(255, 0, 127, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qr-section p {
+  color: #bbb;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.qr-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  border: 2px solid #ff007f;
+  padding: 5px;
+  background: #fff;
+  box-shadow: 0 0 15px rgba(255, 0, 127, 0.4);
+  transition: transform 0.3s;
+}
+
+.qr-image:hover {
+  transform: scale(1.05);
+}
+
+/* ===== 12. GALLERY ===== */
 .gallery-section {
   margin-top: 40px;
   text-align: center;
@@ -252,7 +283,7 @@ body {
   box-shadow: 0 10px 30px rgba(255, 0, 127, 0.3);
 }
 
-/* ===== 12. ANIMATIONS ===== */
+/* ===== 13. ANIMATIONS ===== */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -277,7 +308,7 @@ body {
   transform: translateY(0);
 }
 
-/* ===== 13. FOOTER ===== */
+/* ===== 14. FOOTER ===== */
 .site-footer {
   margin-top: 60px;
   padding-top: 20px;
@@ -296,7 +327,7 @@ body {
   font-weight: 700;
 }
 
-/* ===== 14. RESPONSIVE ===== */
+/* ===== 15. RESPONSIVE ===== */
 @media (max-width: 600px) {
   .glitch-text { font-size: 1.8em; }
   .container { padding: 20px 15px 40px; }
